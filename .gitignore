@@ -9,3 +9,6 @@ gradle-app.setting
 
 # Cache of project
 .gradletasknamecache
+
+#IntelliJ Idea
+.idea/
