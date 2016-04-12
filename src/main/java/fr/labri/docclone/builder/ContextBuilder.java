@@ -78,10 +78,6 @@ public class ContextBuilder {
                     elements.add(fcaTag);
                 }
 
-                //if((tags.get("since") != null) && (tags.get("since").toString().length() > 0)){
-                    //elements.add(new FcaElement(new Tag("@since", tags.get("since").toString())));
-                //}
-
                 JsonArray see = tags.get("see").getAsJsonArray();
 
                 for (int j = 0; j < see.size(); j++) {
@@ -91,16 +87,7 @@ public class ContextBuilder {
                     }
                 }
 
-                /*Set<Set<FcaElement>> subSetsTmp = Sets.powerSet(elements);
-                Set<Set<FcaElement>> subSets = new HashSet<>();
-
-                for (Set<FcaElement> s: subSetsTmp) {
-                    if(s.size() > 0)
-                        subSets.add(s);
-                }*/
-
                 for (FcaElement s : elements){
-                    //FcaElement set = new FcaElement(new Tags(s));
                     rel.add(fcaMethod, s);
                 }
             }

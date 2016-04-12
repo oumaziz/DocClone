@@ -26,6 +26,7 @@ public class App {
         if((args.length >= 2) && (args[0].equals("-f") && args[1] != null)) {
             String filename = args[1];
             String fileoutput = args[1].split("\\.")[0] + "_clones.json";
+
             try {
                 try {
 
@@ -42,7 +43,6 @@ public class App {
 
                     Iterator it = lattice.conceptIterator(Traversal.TOP_OBJSIZE);
 
-                    int count = 0;
                     ArrayList<Concept> clones = new ArrayList<>();
 
                     while (it.hasNext()) {
@@ -54,7 +54,7 @@ public class App {
                         }
                     }
 
-                    System.out.println("Nombre de clones : " + count);
+                    System.out.println("Clones count : " + clones.size());
 
 
                     String json = new Gson().toJson(clones);
@@ -74,13 +74,13 @@ public class App {
                     }
 
                 } catch (JsonSyntaxException e) {
-                    System.err.println("Erreur : JSON incorrect.");
+                    System.err.println("Error : Incorrect JSON file.");
                 }
             } catch (FileNotFoundException e) {
-                System.err.println("Erreur : Fichier introuvable.");
+                System.err.println("Error : File not found.");
             }
         }else{
-            System.err.println("Erreur : Commande incorrecte, veuillez spécifier un fichier.");
+            System.err.println("Error : Please specify a source file.");
         }
     }
 }

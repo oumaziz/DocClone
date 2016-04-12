@@ -1,7 +1,5 @@
 package fr.labri.docclone.models;
 
-import fr.labri.docclone.algo.ElementWithIdentifier;
-
 /**
  * Created by oumaziz on 02/03/2016.
  */

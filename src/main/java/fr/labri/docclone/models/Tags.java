@@ -1,8 +1,5 @@
 package fr.labri.docclone.models;
 
-import fr.labri.docclone.algo.ElementWithIdentifier;
-import fr.labri.docclone.algo.FcaElement;
-
 import java.util.Set;
 
 /**
